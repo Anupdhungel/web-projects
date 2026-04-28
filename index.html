@@ -3,7 +3,9 @@
     <head>
         <title> Anup Dhungel</title>
          <style>
-                body { font-family: Arial, sans-serif;
+                body
+                
+                { font-family: Arial, sans-serif;
                 max-width: 800px;
                 margin:0 auto;
                 padding: 40px;
@@ -36,7 +38,7 @@
         </style>
         </head>
         <body>
-           
+         <button id="darkMode">Dark Mode</button>  
         <h1>Anup Dhungel</h1>
         <h2>A boy studying at Mohanmaya secondary school, Birtamode at class 9th standrad </h2>
         <p>I am 14 years old and learning to build world changing products.</p>
@@ -61,7 +63,52 @@
          <div style="background-color:#3498db ;color:#eda7a7;padding: 20px;margin:20px 0; border-radius: 8px;">
         <a href="https://github.com/Anupdhungel" style="color:black;">My GitHub</a>
     </div>
-        </body>
+
+
+    <button id="mybutton">click me</button>
+    <p id="messeges"></p>
+    <script>
+    console.log("JavaScript is working")
+
+    let name="Anup"
+    let age=14
+
+    console.log(name)
+    console.log(age)
+
+    let button= document.getElementById("mybutton")
+    let message= document.getElementById("messeges")
+
+    button.addEventListener("click",function(){
+        message.textContent="Hello! thanks for visiting my protfolio."
+    })
+    let darkbutton = document.getElementById("darkMode")
+    let isDark = false
+
+darkbutton.addEventListener("click", function() {
+    if (isDark) {
+        document.body.style.backgroundColor = "#f5f5f5"
+        document.body.style.color = "black"
+        darkbutton.textContent = "Dark Mode"
+        isDark = false
+    } else {
+        document.body.style.backgroundColor = "black"
+        document.body.style.color = "white"
+        darkbutton.textContent = "Light Mode"
+        isDark = true
+    }
+})
+        
+        
+    
+        
+
+
+    
+    
+    </script>  
+
+    </body>
 </html>
 
 
